@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Congratulations Sivamani!</title>
+<style>
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height:100vh;
+  background: linear-gradient(135deg,#000,#c00);
+  margin: 0;
+  padding: 20px;
+}
+img {
+  max-width: 90vw;
+  border: 5px solid gold;
+  border-radius: 10px;
+}
+</style>
+</head>
+<body>
+<!-- REPLACE the src link BELOW with your actual certificate image name, like 'certificate.png' -->
+<img src="certificate.png" alt="RCB Lucky Charm Award">
+
+<!-- Sound Effect -->
+<audio autoplay>
+  <source src="https://www.fesliyanstudios.com/play-mp3/6877" type="audio/mp3">
+</audio>
+
+<!-- Confetti Effect -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1/dist/confetti.browser.min.js"></script>
+<script>
+function launchConfetti() {
+    var end = Date.now() + (5 * 1000);
+    (function frame() {
+      confetti({
+        particleCount: 3,
+        angle: 60,
+        spread: 55,
+        origin: { x: Math.random(), y: Math.random() }
+      });
+      if (Date.now() < end) {
+        requestAnimationFrame(frame);
+      }
+    })();
+}
+launchConfetti();
+</script>
+</body>
+</html>
